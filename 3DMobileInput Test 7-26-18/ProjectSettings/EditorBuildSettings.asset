@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Voodoo_Clone2.unity
     guid: b74242bb326c10944b60df15853a7533
+  - enabled: 1
+    path: Assets/Scenes/Voodoo_Clone3.unity
+    guid: d36e5c61495af4be5bbf020186cb29df
   m_configObjects: {}
