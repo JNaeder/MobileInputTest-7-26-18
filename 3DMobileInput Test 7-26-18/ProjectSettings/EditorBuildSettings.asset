@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Voodoo_Clone3.unity
     guid: d36e5c61495af4be5bbf020186cb29df
+  - enabled: 1
+    path: Assets/Scenes/LineGame.unity
+    guid: d0254b03ac07d4bf7bb0bfe3af162299
+  - enabled: 1
+    path: Assets/Scenes/HelixClone.unity
+    guid: 6837465634d43487194f1219491063c1
   m_configObjects: {}

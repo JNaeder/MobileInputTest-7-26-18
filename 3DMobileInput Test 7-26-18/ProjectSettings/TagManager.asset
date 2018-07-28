@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cube
   - Coin
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
+  - Platforms
+  - Bar
+  - Ball
   - 
   - 
   - 

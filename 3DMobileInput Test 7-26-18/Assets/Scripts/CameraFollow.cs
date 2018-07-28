@@ -19,4 +19,11 @@ public class CameraFollow : MonoBehaviour {
 
 		
 	}
+
+
+
+	public void SetNewTransform(Transform newTrans){
+		target = newTrans;
+
+	}
 }
