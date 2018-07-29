@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HelixBall : MonoBehaviour {
 
+    public float maxYVelocity;
+
+
 	Rigidbody rB;
 
 	// Use this for initialization
@@ -21,7 +24,7 @@ public class HelixBall : MonoBehaviour {
 	private void OnCollisionEnter(Collision collision)
 	{
 		if(collision.gameObject.tag == "Platform"){
-			rB.velocity = new Vector3(0, 10, 0);
+			rB.velocity = new Vector3(0, maxYVelocity, 0);
 			//Debug.Log(rB.velocity);
 
 		}

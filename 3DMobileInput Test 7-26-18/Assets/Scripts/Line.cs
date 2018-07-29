@@ -47,11 +47,11 @@ public class Line : MonoBehaviour {
 				if (touch.phase == TouchPhase.Moved)
 				{
 
-					touchPos = cam.ScreenToViewportPoint(touch.position);
-					touchPos.x -= 0.5f;
-					touchPos.x = touchPos.x * Screen.width * 0.01f;
-					touchPos.y -= 0.5f;
-					touchPos.y = touchPos.y * Screen.height * 0.01f;
+                    touchPos = cam.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10));
+					//touchPos.x -= 0.5f;
+					//touchPos.x = touchPos.x * Screen.width * 0.01f;
+					//touchPos.y -= 0.5f;
+					//touchPos.y = touchPos.y * Screen.height * 0.01f;
 
 					if (Mathf.Abs(lastPos.x - touchPos.x) > threshold || Mathf.Abs(lastPos.y - touchPos.y) > threshold)
 					{
@@ -65,7 +65,9 @@ public class Line : MonoBehaviour {
 				}
 				if(touch.phase == TouchPhase.Ended){
 					hasEnded = true;
-
+                    if (linePositions.Count < 2) {
+                        Destroy(gameObject);
+                    }
 				}
 
 			}

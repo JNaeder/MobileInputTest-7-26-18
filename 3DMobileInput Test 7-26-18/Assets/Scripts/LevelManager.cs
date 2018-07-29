@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
 
-	public GameObject pauseScreen;
+	public GameObject pauseScreen, gameOver, winScreen;
 
 	// Use this for initialization
 	void Start()
 	{
-
+        Time.timeScale = 1;
 	}
 
 	// Update is called once per frame
@@ -38,5 +38,19 @@ public class LevelManager : MonoBehaviour
 		Time.timeScale = 1;
 		pauseScreen.SetActive(false);
 	}
+
+    public void GameOverScreen() {
+        Time.timeScale = 0;
+        gameOver.SetActive(true);
+
+    }
+
+    public void WinScreen() {
+        Time.timeScale = 1;
+        winScreen.SetActive(true);
+
+    }
+
+
 
 }

@@ -6,6 +6,7 @@ public class HelixGameManager : MonoBehaviour {
 
 	public Transform bar, platforms;
 	public float fingerMult;
+    public Vector3 gravitySetting;
 
 	Rigidbody barRB;
 
@@ -19,7 +20,7 @@ public class HelixGameManager : MonoBehaviour {
 
 		barRB = bar.GetComponent<Rigidbody>();
 
-		Physics.gravity = new Vector3(0, -15f, 0);
+        Physics.gravity = gravitySetting;
 	}
 	
 	// Update is called once per frame

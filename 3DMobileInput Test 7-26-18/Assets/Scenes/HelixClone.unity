@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,7 +219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &153072988
 MonoBehaviour:
@@ -232,9 +232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e648fcd2f03f44d969986ae912452534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfPlatforms: 30
+  amountOfPlatforms: 50
   spaceBetweenPlatforms: 5
-  piecesToDestroyThreshold: 40
+  piecesToDestroyThreshold: 20
   platformPrefab: {fileID: 1298710301729226, guid: c21c7478056eb4c928980f2904570480,
     type: 2}
 --- !u!1 &267594650
@@ -640,7 +640,7 @@ Transform:
   m_LocalScale: {x: 3, y: 100, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1096103419
 Rigidbody:
@@ -884,7 +884,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1173592868
 MonoBehaviour:
@@ -897,6 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe35ce9c00404c118d5ee022daabac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxYVelocity: 13
 --- !u!1 &1228508659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1095,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 1096103418}
   platforms: {fileID: 153072987}
-  fingerMult: 400
+  fingerMult: 750
+  gravitySetting: {x: 0, y: -40, z: 0}
 --- !u!4 &1780339069
 Transform:
   m_ObjectHideFlags: 0
@@ -1106,7 +1108,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1809029924
 GameObject:

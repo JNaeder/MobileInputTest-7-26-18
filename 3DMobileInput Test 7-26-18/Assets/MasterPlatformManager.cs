@@ -33,12 +33,16 @@ public class MasterPlatformManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(ball.transform.position.y < platforms[platformNum].transform.position.y){
-			platforms[platformNum].DestroyPlatforms();
-			platformNum++;
-			camFollow.SetNewTransform(platforms[platformNum].transform);
+        if (platformNum < platforms.Length)
+        {
+            if (ball.transform.position.y < platforms[platformNum].transform.position.y)
+            {
+                platforms[platformNum].DestroyPlatforms();
+                platformNum++;
+                camFollow.SetNewTransform(platforms[platformNum].transform);
 
-		}
+            }
+        }
 	}
 
 
