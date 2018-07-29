@@ -10,7 +10,7 @@ public class Drawing_GameManager : MonoBehaviour {
     public float gravityMult;
 
     public int score;
-    public float timeScore;
+    public float timeScore, finalTimeScore;
 
     public TextMeshProUGUI scoreNum, WinScore, timeNum, winTimeScore ;
 
@@ -23,6 +23,8 @@ public class Drawing_GameManager : MonoBehaviour {
 	Rigidbody2D ballRB;
 
     Vector2 gravitySetting;
+    Vector3 startingBallPos;
+
     float newTime;
     public int startingCoinNum, currentCoinNum;
 
@@ -35,6 +37,8 @@ public class Drawing_GameManager : MonoBehaviour {
         drawCoins = FindObjectsOfType<DrawCoin>();
         startingCoinNum = drawCoins.Length;
         currentCoinNum = startingCoinNum;
+
+        startingBallPos = ball.transform.position;
 	}
 
 	
@@ -45,7 +49,7 @@ public class Drawing_GameManager : MonoBehaviour {
         scoreNum.text = score.ToString();
         WinScore.text = score.ToString();
         timeNum.text = timeScore.ToString("F2");
-        winTimeScore.text = timeScore.ToString("F2");
+        winTimeScore.text = finalTimeScore.ToString("F2");
 
 
         if (hasStarted) {
@@ -80,6 +84,7 @@ public class Drawing_GameManager : MonoBehaviour {
 
         }
         hasWon = true;
+        finalTimeScore = timeScore;
     }
 
 
@@ -97,6 +102,22 @@ public class Drawing_GameManager : MonoBehaviour {
         newTime = Time.time;
         hasStarted = true;
 	}
+
+
+    public void ResetBall() {
+        currentCoinNum = startingCoinNum;
+        ballRB.isKinematic = true;
+        ballRB.velocity = Vector2.zero;
+        hasStarted = false;
+
+        for (int i = 0; i < drawCoins.Length; i++) {
+            drawCoins[i].gameObject.SetActive(true);
+
+        }
+
+        ball.transform.position = startingBallPos;
+
+    }
 
 
 }

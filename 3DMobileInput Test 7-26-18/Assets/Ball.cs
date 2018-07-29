@@ -33,7 +33,7 @@ public class Ball : MonoBehaviour {
         {
             dGM.score++;
             dGM.currentCoinNum--;
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

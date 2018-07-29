@@ -26,6 +26,14 @@ public class LevelManager : MonoBehaviour
 		Time.timeScale = 1;
 	}
 
+    public void ResetBall() {
+        Time.timeScale = 1;
+        pauseScreen.SetActive(false);
+        gameOver.SetActive(false);
+        winScreen.SetActive(false);
+
+    }
+
 	public void Pause()
 	{
 		Time.timeScale = 0;
@@ -46,7 +54,7 @@ public class LevelManager : MonoBehaviour
     }
 
     public void WinScreen() {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         winScreen.SetActive(true);
 
     }
